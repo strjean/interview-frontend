@@ -5,6 +5,11 @@ Bellow you'll find the instructions you must complete to successfully pass the t
 
 May the force be with you.
 
+# How to
+
+* Fork the repository and make your changes in your own private fork
+* Invite q.luc@soilcapital.com to the fork
+
 ## What needs to be done
 
 * Be a hacker: find a way to successfully login to the app - hint: no code change needed.
