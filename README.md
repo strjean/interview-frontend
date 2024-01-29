@@ -8,7 +8,7 @@ May the force be with you.
 # How to
 
 * Fork the repository and make your changes in your own private fork
-* Invite q.luc@soilcapital.com to the fork
+* Open a Pull Request to the base repository
 
 ## What needs to be done
 
