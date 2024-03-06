@@ -5,6 +5,8 @@ Bellow you'll find the instructions you must complete to successfully pass the t
 
 May the force be with you.
 
+ps: If you have questions, feel free to contact Quentin at q.luc@soilcapital.com
+
 # How to
 
 * Fork the repository and make your changes in your own private fork
