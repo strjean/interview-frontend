@@ -533,7 +533,8 @@
     "register-to-partners-portal": "S'inscrire à la plateforme partenaire",
     "reset-your-password": "Réinitialiser votre mot de passe",
     "settings": "Paramètres",
-    "teams": "Mes équipes"
+    "teams": "Mes équipes",
+    "photos": "Photos"
   },
   "validations": {
     "confirm-password-required": "Mot de passe obligatoire",

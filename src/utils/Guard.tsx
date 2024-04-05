@@ -1,6 +1,6 @@
 import { useAuth } from '@hooks/useAuth';
 import { Navigate } from 'react-router-dom';
-import { authApi, UserI } from '@services';
+import { UserI } from '@services';
 
 type GuardType = 'authenticated' | 'canManageTeam' | 'canManageFarmer' | 'isMobile' | 'notAuthenticated';
 

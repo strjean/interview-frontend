@@ -468,7 +468,8 @@
     "partner-info-card": "Wilt u partner worden?",
     "reset-your-password": "Reset uw wachtwoord",
     "settings": "Instellingen",
-    "teams": "Mijn teams"
+    "teams": "Mijn teams",
+    "photos": "Fotos"
   },
   "validations": {
     "confirm-password-required": "Wachtwoord vereist",
