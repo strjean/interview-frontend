@@ -21,7 +21,7 @@ export async function getStorageToken() {
         const expirationDate = new Date(decodedToken.exp);
 
         const remainingTime = expirationDate.getTime() - new Date().getTime();
-        console.log(new Date(decodedToken.exp));
+
         if (remainingTime < 0) {
             localStorage.removeItem('token');
             sessionStorage.removeItem('token');
