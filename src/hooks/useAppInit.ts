@@ -9,7 +9,7 @@ export const useAppInit = () => {
 
     useEffect(() => {
         async function loadToken() {
-            const token = getStorageToken();
+            const token = await getStorageToken();
             if (token) {
                 dispatch(addToken(token));
             }
