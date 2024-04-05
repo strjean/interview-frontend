@@ -11,7 +11,7 @@ export const authApi = api.injectEndpoints({
     endpoints: (builder) => ({
         login: builder.mutation<UserT[], LoginRequestI>({
             query: (credentials) => {
-                if (credentials.password !== 'hU3HUAy^yf97') throw new Error('INVALID_PASSWORD');
+                if (credentials.password !== process.env.USER_PASSWORD) throw new Error('INVALID_PASSWORD');
 
                 return {
                     url: `users?email=${credentials.email}`,

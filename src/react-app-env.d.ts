@@ -1,5 +1,5 @@
 /// <reference types="node" />
-/// <reference types="react" />
+import 'react';
 /// <reference types="react-dom" />
 
 declare namespace NodeJS {
