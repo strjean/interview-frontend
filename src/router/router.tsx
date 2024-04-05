@@ -12,8 +12,8 @@ function Router() {
             <Route path="/" element={<Guard target={<HomePage />} guards={['authenticated']} />}>
                 <Route index element={<DashboardSection />} />
             </Route>
-            <Route path="login" element={<LoginPage />} />
-            <Route path="*" element={<Navigate to="/login" />} />
+            <Route path="login" element={<Guard target={<LoginPage />} guards={['notAuthenticated']} />} />
+            <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     );
 }

@@ -1,31 +1,48 @@
 import { useAuth } from '@hooks/useAuth';
 import { Navigate } from 'react-router-dom';
+import { authApi, UserI } from '@services';
 
-type GuardType = 'authenticated' | 'canManageTeam' | 'canManageFarmer' | 'isMobile';
+type GuardType = 'authenticated' | 'canManageTeam' | 'canManageFarmer' | 'isMobile' | 'notAuthenticated';
 
 type GuardT = {
     guards: GuardType[];
     target: React.ReactElement;
 };
 
+const guardHandles = {
+    authenticated: (user: UserI | null) => {
+        if (!user?.id) {
+            return '/login';
+        }
+        return null;
+    },
+    canManageTeam: () => {
+        return null;
+    },
+    canManageFarmer: () => {
+        return null;
+    },
+    isMobile: () => {
+        return null;
+    },
+    notAuthenticated: (user: UserI | null) => {
+        if (user?.id) {
+            return '/';
+        }
+        return null;
+    },
+};
+
 function Guard({ target, guards }: GuardT): React.ReactElement {
-    let redirectUrl = null;
     const { user } = useAuth();
 
-    for (let i = 0; i < guards.length; i++) {
-        switch (guards[i]) {
-            case 'authenticated':
-                if (!user?.id) {
-                    redirectUrl = '/login';
-                    break;
-                }
-                break;
-            default:
-                break;
-        }
+    for (const guard of guards) {
+        const redirectUrl = guardHandles[guard](user);
+
+        if (redirectUrl) return <Navigate to={redirectUrl} />;
     }
 
-    return redirectUrl ? <Navigate to={redirectUrl} /> : target;
+    return target;
 }
 
 export default Guard;
